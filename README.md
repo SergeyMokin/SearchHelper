@@ -1,2 +1,3 @@
 # SearchHelper
-Simple bot for telegram
+Simple bot for telegram.
+@search_helper_bot - никнейм бота.
