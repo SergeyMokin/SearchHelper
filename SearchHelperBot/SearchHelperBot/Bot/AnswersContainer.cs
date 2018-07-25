@@ -28,21 +28,21 @@ namespace SearchHelperBot.Bot
         {
             {
                 "/help",
-                "SearchHelper - помощь\n\n" +
-                "/search <text to search here> - поиск ответа на stackoverflow;\n"
+                "SearchHelper - help\n\n" +
+                "/search <text to search here> - search for a response at stackoverflow;\n"
             },
             {
                 "/start",
-                "/help - помощь в использовании;\n" +
-                "/search <text to search here> - поиск ответа на stackoverflow;\n"
+                "/help - help in using;\n" +
+                "/search <text to search here> - search for a response at stackoverflow;\n"
             },
             {
                 "/wtf",
-                "Водка только сначала стоит дорого, потом ее цена не имеет значения."
+                "Vodka only first expensive, then its price does not matter."
             },
             {
                 "/nakatim",
-                "Лучше делом займись."
+                "Better deal with the matter."
             }
         };
 
@@ -62,7 +62,7 @@ namespace SearchHelperBot.Bot
             }
             catch
             {
-                return "Не могу распознать команду.";
+                return "I can not recognize the command.";
             }
         }
 
@@ -93,7 +93,7 @@ namespace SearchHelperBot.Bot
             }
             catch
             {
-                return "Не могу найти ответ.";
+                return "I can not find the answer.";
             }
         }
     }
