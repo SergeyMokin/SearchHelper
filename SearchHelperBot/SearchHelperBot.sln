@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchHelperBot", "SearchHelperBot\SearchHelperBot.csproj", "{D4860EDD-514F-463F-AD9B-6B9905E9E3C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4860EDD-514F-463F-AD9B-6B9905E9E3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4860EDD-514F-463F-AD9B-6B9905E9E3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4860EDD-514F-463F-AD9B-6B9905E9E3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4860EDD-514F-463F-AD9B-6B9905E9E3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC7C02AF-3144-4A64-97BA-8A7647E9FD4E}
+	EndGlobalSection
+EndGlobal
