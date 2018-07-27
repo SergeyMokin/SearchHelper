@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Text;
+using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Args;
+using Telegram.Bot.Types.Enums;
 
 namespace SearchHelperBot.Bot
 {
@@ -10,7 +12,13 @@ namespace SearchHelperBot.Bot
         private static string _apiKey {
             get
             {
-                return Encoding.UTF8.GetString(Convert.FromBase64String("Njk0NjQwODE2OkFBR0ZwUWY2VFQ4TEowcXdNbDgyOXZUbG4taVNZYjh2UC1r"));
+                return Encoding
+                    .UTF8
+                    .GetString(
+                        Convert
+                        .FromBase64String(
+                            "Njk0NjQwODE2OkFBR0ZwUWY2VFQ4TEowcXdNbDgyOXZUbG4taVNZYjh2UC1r"
+                            ));
             }
         }
 
@@ -23,19 +31,23 @@ namespace SearchHelperBot.Bot
             Initialize();
         }
 
-        public static void Start()
-        {
-            _bot.StartReceiving();
-        }
-
-        public static void Stop()
-        {
-            _bot.StopReceiving();
-        }
-
         private static void Initialize()
         {
             _bot.OnUpdate += SendAnswer;
+        }
+
+        public static string Start()
+        {
+            new Task(() => _bot.StartReceiving()).Start();
+
+            return "Getting started successfully.";
+        }
+
+        public static string Stop()
+        {
+            new Task(() => _bot.StopReceiving()).Start();
+
+            return "Ended successfullyy.";
         }
 
         private static async void SendAnswer(object su, UpdateEventArgs evu)
@@ -43,7 +55,7 @@ namespace SearchHelperBot.Bot
             if (evu.Update.CallbackQuery != null 
                 || evu.Update.InlineQuery != null
                 || evu.Update.Message == null
-                || evu.Update.Message.Type != Telegram.Bot.Types.Enums.MessageType.Text)
+                || evu.Update.Message.Type != MessageType.Text)
             {
                 return;
             }
