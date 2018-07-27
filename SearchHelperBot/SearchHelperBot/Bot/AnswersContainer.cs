@@ -32,7 +32,8 @@ namespace SearchHelperBot.Bot
                     ?? throw new ArgumentNullException();
 
                 if (message.Contains("/search")
-                    || message.Contains("/s "))
+                    || message.Contains("/s ")
+                    || message.Equals("/s"))
                 {
                     message = 
                         message
